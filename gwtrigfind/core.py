@@ -471,7 +471,7 @@ def find_omega_online_files(channel, start, end, filetag='DOWNSELECT',
     return _find_in_gps_dirs(os.path.join(base, trigform), start, end, ngps=5)
 
 def find_snax_files(channel, start, end, base=None, ext='h5'):
-    """Find KleineWelle output event files
+    """Find SNAX trigger files
 
     Parameters
     ----------
