@@ -502,9 +502,10 @@ def find_snax_files(channel, start, end, base=None, ext='h5'):
     # find base path
     tag = "%s-SNAX_FEATURES" % ifo
     if base is None:
-        base = os.path.join(os.sep, 'home', 'idq', 'snax', 'production', 'online', '*',
-                'features')
+        base = os.path.join(os.sep, 'home', 'idq', 'snax', 'production',
+                            'online', '*', 'features')
 
     # loop over GPS directories and find files
     filename = '%s-*-*.%s' % (tag, ext)
-    return _find_in_gps_dirs(os.path.join(base, '{0}', filename), start, end, ngps=5)
+    return _find_in_gps_dirs(os.path.join(base, '{0}', filename),
+                             start, end, ngps=5)
