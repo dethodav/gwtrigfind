@@ -470,6 +470,7 @@ def find_omega_online_files(channel, start, end, filetag='DOWNSELECT',
 
     return _find_in_gps_dirs(os.path.join(base, trigform), start, end, ngps=5)
 
+
 def find_snax_files(channel, start, end, base=None, ext='h5'):
     """Find SNAX trigger files
 
@@ -496,7 +497,6 @@ def find_snax_files(channel, start, end, base=None, ext='h5'):
     files : `list` of `str`
         a list of file URLs
     """
-    span = Segment(int(start), int(end))
     ifo, name = _format_channel_name(str(channel)).split('-', 1)
 
     # find base path
