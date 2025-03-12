@@ -506,6 +506,6 @@ def find_snax_files(channel, start, end, base=None, ext='h5'):
                             'online', '*', 'features')
 
     # loop over GPS directories and find files
-    filename = f"{tag}-*-*.{ext}" % (tag, ext)
+    filename = f"{tag}-*-*.{ext}"
     return _find_in_gps_dirs(os.path.join(base, '{0}', filename),
                              start, end, ngps=5)
