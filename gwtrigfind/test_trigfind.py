@@ -203,7 +203,7 @@ def test_find_snax_files():
         'H1-SNAX_FEATURES-1425848280-20.h5',
     ]
 
-    with mock.patch('glob.glob', lambda x: test_glob):
+    with mock.patch('glob.iglob', lambda x: test_glob):
         c = core.find_snax_files(
                 "H1:CAL-DELTA_EXTERNAL_DQ", 1125848220, 1125848300
                 )
